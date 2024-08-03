@@ -1,5 +1,4 @@
 "use client";
-
 import CounterComponent from "@/components/Counter/Counter";
 import TotalSumCounter from "@/components/TotalSumCounter/TotalSumCounter";
 import { useAppSelector } from "@/redux/hooks";

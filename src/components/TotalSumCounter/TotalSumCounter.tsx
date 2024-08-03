@@ -1,8 +1,6 @@
-"use client";
 import { resetValue } from "@/redux/features/counterSlice/counterSlice";
 import { useAppDispatch } from "@/redux/hooks";
 import React from "react";
-
 interface Props {
   totalValue: number;
 }

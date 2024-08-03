@@ -14,7 +14,7 @@ const TotalSumCounter = ({ totalValue }: Props) => {
   };
 
   return (
-    <div className="bg-white mt-5 p-5 text-center rounded-lg shadow-2xl">
+    <div className="bg-white my-5 p-5 text-center rounded-lg shadow-2xl">
       <h3 className="text-black text-[20px] font-semibold">
         Total count value - {totalValue}
       </h3>

@@ -15,7 +15,7 @@ export default function Home() {
       <h1 className="text-center text-[30px] text-gray-600 font-semibold mt-5">
         --- Counter App ---
       </h1>
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 px-5">
         {counterState.map((counter) => (
           <CounterComponent key={counter?.id} counter={counter} />
         ))}

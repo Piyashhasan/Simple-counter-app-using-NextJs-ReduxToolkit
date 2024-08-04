@@ -5,9 +5,6 @@ import { useAppSelector } from "@/redux/hooks";
 
 export default function Home() {
   const { counterState } = useAppSelector((state) => state.counter);
-  const totalValue = counterState.reduce((prev, current) => {
-    return (prev += current.value);
-  }, 0);
 
   return (
     <main className="container">
@@ -20,7 +17,7 @@ export default function Home() {
         ))}
       </div>
       <div className="flex items-center justify-center">
-        <TotalSumCounter totalValue={totalValue} />
+        <TotalSumCounter />
       </div>
     </main>
   );

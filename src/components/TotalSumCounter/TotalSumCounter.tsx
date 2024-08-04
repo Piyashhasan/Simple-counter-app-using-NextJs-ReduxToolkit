@@ -1,11 +1,14 @@
 import { resetValue } from "@/redux/features/counterSlice/counterSlice";
-import { useAppDispatch } from "@/redux/hooks";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import React from "react";
-interface Props {
-  totalValue: number;
-}
 
-const TotalSumCounter = ({ totalValue }: Props) => {
+const TotalSumCounter = () => {
+  const { counterState } = useAppSelector((state) => state.counter);
+  const totalValue = counterState.reduce((prev, current) => {
+    return (prev += current.value);
+  }, 0);
+
+  // --- reset action dispatch ---
   const dispatch = useAppDispatch();
   const handleResetValue = () => {
     dispatch(resetValue());
